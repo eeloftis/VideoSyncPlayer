@@ -1,0 +1,134 @@
+.m_sticky-nav {
+  &.stick {
+    position: fixed;
+    top: 0;
+  }
+  z-index: 9;
+  width: 100%;
+
+  &.count-3 {
+    li {
+      width: calc(100% / 3);
+    }
+  }
+
+  &.count-4 {
+    li {
+      width: 25%;
+    }
+  }
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    text-align: center;
+    background-color: palette(grey,dark);
+    border:1px solid darken(palette(grey,dark),10%);
+    padding: 1.5em 0.5em 1em;
+    @extend %default-transition;
+
+    a {
+      color: palette(light);
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: type(sans);
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      font-size: 1em;
+    }
+
+    &:hover, &.active {
+      background-color: palette(primary);
+    }
+
+    img,
+    svg {
+      width: 10px;
+      height: 10px;
+      display: block;
+      margin: 0 auto;
+      fill: #fff;
+      margin-bottom: 5px;
+    }
+  }
+}
+@media all and (min-width: 900px) {
+  .m_sticky-nav {
+    position: fixed;
+    left: 0;
+    width: auto;
+    top: 35%;
+
+    &.stick {
+      position: fixed;
+      top: 35%;
+    }
+
+    ul {
+      display: block;
+    }
+
+    &.count-3,
+    &.count-4 {
+      li {
+        width: 45px;
+        height: 45px;
+        margin-bottom: 1em;
+      }
+    }
+
+    li {
+      -webkit-transition: width 150ms ease-in-out;
+      -moz-transition: width 150ms ease-in-out;
+      -o-transition: width 150ms ease-in-out;
+      transition: width 150ms ease-in-out;
+
+      span.text {
+        font-size: 1.4em;
+        line-height: 11px;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: opacity .15s ease-in-out;
+        -moz-transition: opacity .15s ease-in-out;
+        -o-transition: opacity .15s ease-in-out;
+        transition: opacity .15s ease-in-out;
+        transition-delay: .10s;
+      }
+
+      &:hover, &.active {
+        width: 200px;
+        span.text {
+          display: inline-block;
+          opacity: 1;
+          visibility: visible;
+          width: auto;
+          margin: 0 10px 0 20px;
+          // max-width: 120px;
+          text-align: right;
+          position: relative;
+        }
+      }
+
+      svg {
+        margin: 0 0 0 1em;
+        width: 15px;
+        height: 15px;
+        display: block;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      a {
+        display: flex;
+      }
+    }
+  }
+}
+
+body.screenshot{
+  .m_sticky-nav{
+    position:absolute;
+  }
+}

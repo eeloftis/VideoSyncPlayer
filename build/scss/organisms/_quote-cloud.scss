@@ -1,0 +1,78 @@
+section.o_quote-cloud{
+    padding:4em 1em;
+    ul{
+        margin:20px;
+        display:flex;
+        flex-direction:column;
+    }
+    li{
+        display:block;
+        padding: 2em 2em 2em 5em;
+        margin:0 auto 1em;
+        position:relative;
+        order:2;
+        &:before{
+            content:"“";
+            display:block;
+            position:absolute;
+            top:20px;
+            left:20px;
+            font-size:4em;
+            color:palette(primary);
+            font-weight:900;
+        }
+        &:after{
+            content:"”";
+            margin-left:-0.25em;
+            display:inline-block;
+        }
+        &.photo{
+            padding:0px;
+            order:1;
+            img{
+                width:100%;
+            }
+            &:before,
+            &:after{
+                content:none;
+            }
+        }
+    }
+}
+
+@media all and (min-width:500px){
+    section.o_quote-cloud{
+        ul{
+            flex-direction:row;
+            flex-wrap:wrap;
+            align-items:center;
+            justify-content:space-between;
+        }
+        li{
+            width:48%;
+            &.long{
+                font-size:1.7em;
+            }
+            &.short{
+                font-size:1.8em;
+            }
+            &:before{
+                left:10px;
+                top:65px;
+                font-size:7em;
+            }
+        }
+    }
+}
+
+@media all and (min-width:800px){
+    section.o_quote-cloud{
+        li{
+            width:31.5%;
+            order:1;
+            &.photo{
+                order:1;
+            }
+        }
+    }
+}

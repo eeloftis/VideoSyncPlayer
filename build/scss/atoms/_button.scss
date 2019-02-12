@@ -1,0 +1,109 @@
+.a_button {
+  font-size: 14px;
+  padding: 0.75em 1.5em 0.8em;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 700;
+  display: inline-block;
+  border: 2px solid inherit;
+  transition:top 0.3s ease-in-out, left 0.3s ease-in-out;
+  font-family: type(sans);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  span{
+    position:relative;
+    z-index:1;
+  }
+
+  &.inline{
+    text-transform:initial;
+    padding:1em 0px;
+    text-decoration:underline;
+    color:palette(primary);
+    font-weight:300;
+    letter-spacing:0px;
+    &:hover{
+      text-decoration:none;
+    }
+  }
+
+  &.primary {
+    background-color: palette(primary);
+    color: palette(light);
+    border: 2px solid palette(primary);
+    position: relative;
+    transition-duration: 2s;
+
+    &:hover:not(:disabled) {
+      @extend %default-transition;
+      top: -2px;
+      left: -2px;
+
+      &:after {
+        top: 6px;
+        left: 6px;
+        position: absolute;
+        z-index: -1;
+        content: "";
+        background-color: darken(palette(grey),10%);
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &.secondary {
+    color: palette(primary);
+    border: 2px solid palette(primary);
+    background-color: transparent;
+    &:hover:not(:disabled) {
+      background-color: palette(primary);
+      color: palette(light);
+      border: 2px solid palette(primary);
+
+    }
+  }
+
+  &.tertiary {
+    background-color: palette(light);
+    border: 2px solid palette(light);
+    color: palette(primary);
+    position: relative;
+    @extend %default-transition;
+
+    &:hover:not(:disabled) {
+      top: -2px;
+      left: -2px;
+      @extend %default-transition;
+
+      &:after {
+        content: "";
+        background-color: #697282;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 6px; // @ema can you try and create a @size function that accepts a parameter that will automatically add these two values? I think it could help clean this up a bit and a fun exercise in scss to know
+        left: 6px;
+        position: absolute;
+        z-index: -1;
+      }
+    }
+  }
+
+  &.quaternary {
+    color: palette(light);
+    border: 2px solid palette(light);
+    background-color: transparent;
+    &:hover:not(:disabled) {
+      background-color: palette(light);
+      color: palette(primary);
+      border: 2px solid palette(light);
+    }
+  }
+
+  &:disabled{
+    cursor:not-allowed;
+    opacity:0.5;
+  }
+}

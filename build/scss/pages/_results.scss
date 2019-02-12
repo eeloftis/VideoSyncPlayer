@@ -1,0 +1,269 @@
+.results {
+  position: relative;
+  .a_title-container {
+    position: absolute;
+    top: -69px;
+    background-color: transparent;
+    color: #fff;
+  }
+
+  div.block {
+    padding: 6em 2em;
+  }
+
+  .o_results-hero {
+    // height: 100vh;
+    // max-height: 75vh;
+    // min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    div.block {
+      padding: 2em;
+      flex-basis: 100%;
+      width: 100%;
+      margin: 0;
+    }
+
+    .a_button.primary {
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+  }
+
+  .top-copy {
+    margin-bottom: 60px;
+  }
+
+  h2 {
+    padding-right: 30px;
+  }
+
+  p {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  p.legal{
+    max-width:325px;
+    padding:0px;
+    margin-top:0px;
+    line-height:1;
+  }
+
+  // .a_textbox,
+  // .custom-select,
+  // span.optional {
+  //   margin-left: 20px;
+  // }
+
+  .reasons {
+    padding-right: 20px;
+    margin-left: 20px;
+    position: relative;
+
+    h3 {
+      font-size: 15px;
+      margin-bottom: 0;
+    }
+
+    ul {
+      li {
+        padding-left: 8px;
+        margin-bottom: 0;
+
+        &:before {
+          color: palette(dark);
+          left: 0;
+          content: "\25CF";
+          position: absolute;
+          font-size: 8px;
+        }
+      }
+    }
+
+    .may, .may-not {
+      li {
+        display: none;
+      }
+    }
+
+    .may {
+      li:first-of-type {
+        display: block;
+      }
+    }
+  }
+
+  // .a_button.primary {
+  //   margin-left: 20px;
+  //   margin-top: 10px;
+  // }
+
+  .o_results-body {
+    color: palette(light);
+  }
+
+  .bottom-copy {
+    padding: 0 2em;
+
+    p {
+      padding-left: 0;
+    }
+  }
+
+  ul {
+    li {
+      margin-bottom: 10px;
+      &:before{
+        content:"\25CF";
+        display:inline-block;
+        position:absolute;
+        color:palette(light);
+        font-size: 10px;
+      }
+      a {
+        left: 8px;
+        &:before {
+          left: -8px;
+        }
+      }
+    }
+  }
+}
+@media all and (min-width: 1000px) {
+  .results {
+    &.no-bp {
+      div.block {
+        display: flex;
+        justify-content: space-between;
+        padding: 17em 1em;
+      }
+    }
+
+    .a_title-container {
+      top: -107px;
+    }
+
+    h2 {
+      max-width: 560px;
+      font-size: 2.8em;
+    }
+
+    h3 {
+      margin-bottom: 5px;
+    }
+
+    p {
+      max-width: 700px;
+      padding-left: 50px;
+    }
+
+    .background-claw.o_text-block{
+      div.block{
+        padding-top:5em;
+        padding-bottom:10em;
+      }
+    }
+
+    .reasons {
+      display: flex;
+      // align-items: center;
+      // justify-content: center;
+      // padding-left: 50px;
+      margin-left: 0;
+      padding-left: 50px;
+      align-items:space-around;
+      & > div{
+        width:48%;
+      }
+      ul {
+        padding-left: 0;
+        padding-right: 20px;
+      }
+    }
+
+
+
+    .o_results-hero {
+      // max-height: 100vh;
+      align-items: normal;
+
+      div.block {
+        display: flex;
+        justify-content: space-between;
+        padding: 5em 1em 2em;
+
+        .top-copy {
+          align-self: flex-start;
+          padding-left: 90px;
+        }
+
+        .m_call-out {
+          align-self: flex-end;
+          margin-top: 40px;
+        }
+        .a_button.primary {
+          margin-left: 50px;
+          // margin-top: 10px;
+        }
+      }
+    }
+
+    .copy-block {
+      position: relative;
+      top: -20px;
+
+      h2 {
+        margin-top: 0;
+      }
+    }
+
+    .bottom-copy {
+      padding: 0;
+
+      p {
+        padding-left: 50px;
+      }
+    }
+
+    ul {
+      padding-left: 50px;
+      max-width: 450px;
+
+      li {
+        margin-bottom: 10px;
+      }
+    }
+
+    .success {
+      .o_results-hero {
+        // max-height: 100vh;
+        div.block {
+          padding: 11em 1em;
+
+          .top-copy {
+            align-self: flex-start;
+            padding-left: 90px;
+          }
+
+          .m_call-out {
+            align-self: flex-end;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1400px) {
+  .results {
+    section {
+      h2 {
+        font-size: 3.6em;
+      }
+    }
+  }
+}

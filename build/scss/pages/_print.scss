@@ -1,0 +1,176 @@
+#print {
+  display: none;
+}
+@media print {
+  .results,
+  header,
+  section, footer, dialog{
+    display: none !important;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact;
+}
+
+  #print {
+    display: block;
+    margin-top: -1in;
+    header,
+    section, footer {
+    display: block !important;
+    }
+
+
+    header {
+      background-color: palette(dark);
+      .block {
+        max-width: 800px;
+        padding: 2em;
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      a.logo {
+        width: 100%;
+        img {
+          width: 100%;
+          max-width: 160px;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+
+      span {
+        text-align: right;
+        color: palette(grey, novartis);
+        font-size: 1.2em;
+        font-weight: 700;
+        position: absolute;
+        top: 40%;
+        right: 20px;
+      }
+    }
+
+    .pdf-hero {
+      // background: url("/images/pdf-bg.jpg") !important;
+      // background-size: cover;
+      // background-position: -5px 0;
+      position: relative;
+      img {
+        width: 100%;
+        height: auto;
+        max-height: 250px;
+      }
+
+      .block {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        max-width: 800px;
+        padding: 3em 2em 1em 2em;
+      }
+
+      h1 {
+        text-transform: uppercase;
+        color: palette(light);
+        margin-top: 0;
+        font-family: type(sans);
+        font-weight: 800;
+        font-size: 32px;
+        max-width: 500px;
+        margin-bottom: 10px;
+
+        span {
+          color: palette(primary);
+        }
+      }
+
+      p {
+        font-weight: 500;
+        color: palette(light);
+        padding-left: 50px;
+        max-width: 550px;
+        font-size: 1.4em;
+      }
+    }
+
+    .pdf-results {
+      .block {
+        padding: 5em 2em;
+        max-width: 800px;
+      }
+
+      ol {
+        counter-reset: item;
+      }
+
+      li {
+        font-size: 1.5em;
+        border-top: 2px solid palette(grey,light);
+        padding: 1.5em 4em;
+        position: relative;
+
+        > div {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+        }
+
+        &:last-of-type {
+          border-bottom: 2px solid palette(grey,light);
+        }
+
+        &:before {
+          content: counter(item) ". ";
+          counter-increment: item;
+          color: palette(primary);
+          position: absolute;
+          top: 1.5em;
+          left: 3em;
+        }
+
+        .answer {
+          font-weight: 800;
+          text-align: right;
+          display: inline-block;
+          margin-left: 2em;
+        }
+      }
+    }
+
+    footer {
+      background-color: palette(dark);
+      padding: 1em 2em;
+
+      .block {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      p {
+        display: block;
+        padding: 1em;
+        font-size: 1.1em;
+        color: palette(grey, novartis);
+        text-align: center;
+      }
+      a {
+        margin-left: 8em;
+      }
+
+      img {
+        width: 100%;
+        max-width: 140px;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  }
+}

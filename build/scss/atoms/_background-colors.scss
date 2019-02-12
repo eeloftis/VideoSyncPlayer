@@ -1,0 +1,95 @@
+// modifier: colors
+.background-color-white{
+    background-color:palette(light);
+    position: relative;
+    z-index: 1;
+ }
+
+ .background-color-primary{
+    background-color:palette(primary);
+    position: relative;
+    z-index: 1;
+
+    .digit {
+      color: palette(dark);
+    }
+ }
+ .background-color-light-primary{
+    background-color:palette(primary,light);
+    position: relative;
+    z-index: 1;
+ }
+
+ .background-color-grey{
+    background-color:palette(grey);
+    position: relative;
+    z-index: 1;
+ }
+
+ .background-color-light-grey{
+    background-color:palette(grey, light);
+    position: relative;
+    z-index: 1;
+ }
+
+ .background-color-medium-grey{
+    background-color:palette(grey, medium);
+    position: relative;
+    z-index: 1;
+    .digit {
+      color: palette(dark);
+    }
+ }
+
+ .background-color-dark-grey{
+    background-color:palette(grey, dark);
+    position: relative;
+    z-index: 1;
+    .digit {
+      color: palette(primary);
+    }
+ }
+
+ .background-color-dark{
+    background-color:palette(dark);
+    position: relative;
+    z-index: 1;
+    .digit {
+      color: palette(primary);
+    }
+ }
+
+ .background-color-dark-blue{
+   background-color:palette(dark,blue);
+   position: relative;
+   z-index: 1;
+}
+
+.background-claw {
+  background-image: url(../images/PSYOP-Claw-silo.png);
+  background-repeat: no-repeat;
+  background-position: -150px -20px;
+  background-size: 250px;
+
+  &.pull-claw-right {
+    -moz-transform: scaleX(-1);
+-o-transform: scaleX(-1);
+-webkit-transform: scaleX(-1);
+transform: scaleX(-1);
+div.block {
+  -moz-transform: scaleX(-1);
+-o-transform: scaleX(-1);
+-webkit-transform:scaleX(-1);
+transform: scaleX(-1);
+}
+  }
+
+
+}
+
+
+@media all and (min-width: 900px) {
+.background-claw {
+  background-position: left 100px;
+}
+}

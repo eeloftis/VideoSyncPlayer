@@ -1,0 +1,23 @@
+nav.inline-nav{
+    text-align:center;
+    li{
+        display:block;
+        margin:1em 0px;
+    }
+    a{
+        font-size:1.4em;
+        text-transform:uppercase;
+        text-decoration:none;
+        color:palette(primary);
+        letter-spacing:0.05em;
+    }
+}
+
+@media all and (min-width: 350px){
+    nav.inline-nav{
+        li{
+            display:inline-block;
+            margin:0px 1em;
+        }
+    }
+}

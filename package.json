@@ -1,0 +1,59 @@
+{
+  "name": "frontier-microsite",
+  "version": "1.0.0",
+  "description": "Frontier Microsite",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hillholliday/Frontier-Component-Library"
+  },
+  "engines": {
+    "node": ">=8.0"
+  },
+  "keywords": [
+    "Gulp",
+    "Boilerplate"
+  ],
+  "author": "Hill Holliday",
+  "license": "Copyright, All Rights Reserved",
+  "homepage": "TBD",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0",
+    "browser-sync": "^2.26.3",
+    "browserify": "^16.1.1",
+    "coffeelint": "^1.16.2",
+    "dotenv": "^6.2.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-cached": "^1.1.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-harp": "0.0.4",
+    "gulp-imagemin": "^3.4.0",
+    "gulp-jshint": "^2.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.0",
+    "gulp-sass-glob": "^1.0.9",
+    "gulp-sourcemaps": "^1.12.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uglifyjs": "^0.6.2",
+    "gulp-util": "^3.0.7",
+    "gulp-watch": "^5.0.0",
+    "jshint": "^2.9.6",
+    "jshint-stylish": "^2.2.1",
+    "jstransformer-marked": "^1.0.3",
+    "surge": "^0.20.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "harp": "^0.29.0",
+    "npm": "^6.5.0"
+  },
+  "false": {}
+}

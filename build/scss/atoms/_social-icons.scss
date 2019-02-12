@@ -1,0 +1,61 @@
+.share-container {
+  margin-top: 20px;
+  margin-left: 10px;
+  
+  svg {
+    display: inline;
+    width: 18px;
+    height: 18px;
+    position: relative;
+    margin: 0 auto;
+    fill: palette(primary);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.cta.share {
+  margin-right: 0.75em;
+  color: transparent;
+  min-width: 45px;
+  min-height: 45px;
+  padding: 1.5em 1em 0.5em;
+  line-height: 45px;
+  border: 1px solid palette(primary);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    background-color: palette(primary);
+
+    svg {
+        fill: palette(light);
+    }
+  }
+}
+
+@media all and (min-width: 768px) {
+  .share-container {
+    margin-top: 30px;
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .cta.share {
+    margin-right: 0.75em;
+    min-width: 60px;
+    min-height: 60px;
+    padding: 3em 1.5em 1em;
+    line-height: 60px;
+  }
+}

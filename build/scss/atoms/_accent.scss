@@ -1,0 +1,6 @@
+span.accent{
+    transition:color 3s ease-in-out;
+    &.in-view{
+        color:palette(primary);
+    }
+}
